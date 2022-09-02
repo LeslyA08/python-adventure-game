@@ -1,7 +1,7 @@
 import time 
 
 def scene1():
-    print("You slowly open your eyes and look around you. The room is cold and dark, nowhere you have been before. \n You ask yourself, how did I get here? You slowly make your way onto the door, your hear sounds coming from the other side. \n Should you go out and investigate or should you stay put? \n Choose: stay or go?")
+    print(" slowly open your eyes and look around you. The room is cold and dark, nowhere you have been before. \n You ask yourself, how did I get here? You slowly make your way onto the door, your hear sounds coming from the other side. \n Should you go out and investigate or should you stay put? \n Choose: stay or go?")
     a1 = input()
     time.sleep(2)
     if (a1.upper() == 'GO'):
@@ -26,6 +26,7 @@ def scene2():
     else:
         print("*******************Choose correctly!*******************")
         scene2()
+
 def scene3():
     print("As you walk towards the light, you notice a faint figure. You can barely make out a shape of a man... a rotting man. You freeze in place, contemplating what to do. You grab fireplace poker to defend yourself. Should you attack? or should you quietly run and hope he didn't hear you? Choose: Attack or Flee?")
     a1=input()
@@ -39,6 +40,61 @@ def scene3():
     else:
         print("*******************Choose correctly!*******************")
         scene3()
+
+def scene4():
+    print("You walk down the halway in total darkness. You reach out to touch anything in front of you. You feel old furniture here and there, but nothing too concerning...yet. \n you stumble upon a dead end. You still can't see where to go. You feel around for anything at all. You come across a door. Do you think it's safe to go in? \n Choose: Go or Stay?")
+    a1=input()
+    time.sleep(2)
+    if(a1.upper()=='GO'):
+        print("YOLO")
+        scene6()
+    elif(a1.upper()=='STAY'):
+        print("ded")
+        scene7()
+    else:
+        print("*******************Choose correctly!*******************")
+        scene4()
+
+def scene5():
+    print("Hello, left or right")
+    a1=input()
+    time.sleep(2)
+    if(a1.upper()=='LEFT'):
+        print("Go")
+        scene4()
+    elif(a1.upper()=='RIGHT'):
+        print("right")
+        scene7()
+    else:
+        print("*******************Choose correctly!*******************")
+        scene5() 
+
+def scene6():
+    print("Hello, left or right")
+    a1=input()
+    time.sleep(2)
+    if(a1.upper()=='LEFT'):
+        print("Go")
+        scene4()
+    elif(a1.upper()=='RIGHT'):
+        print("you win")
+    else:
+        print("*******************Choose correctly!*******************")
+        scene6() 
+
+def scene7():
+    print("Hello, left or right")
+    a1=input()
+    time.sleep(2)
+    if(a1.upper()=='LEFT'):
+        print("Go")
+        scene5()
+    elif(a1.upper()=='RIGHT'):
+        print("you lose")
+        scene1()
+    else:
+        print("*******************Choose correctly!*******************")
+        scene7() 
 
 scene1()
             
