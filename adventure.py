@@ -1,7 +1,22 @@
 import time 
+import logging
+import datetime
+
+
+logging.basicConfig(filename="adventurelog.log", level= logging.DEBUG)
+
+class Player:
+    def __init__(self, name):
+        self.name= name
+
+def creat_csv():
+    with open('adventurelog.log') as file:
+        lines = file.read().splitlines()
+        lines = [lines[x:x+3] for x in range(0,len(lines), 3)]
 
 def scene1():
-    print(" slowly open your eyes and look around you. The room is cold and dark, nowhere you have been before. \n You ask yourself, how did I get here? You slowly make your way onto the door, your hear sounds coming from the other side. \n Should you go out and investigate or should you stay put? \n Choose: stay or go?")
+    logging.info(f"The game begins {datetime.datetime.now()}")
+    print("You slowly open your eyes and look around you. The room is cold and dark, nowhere you have been before. \n You ask yourself, how did I get here? You slowly make your way onto the door, your hear sounds coming from the other side. \n Should you go out and investigate or should you stay put? \n Choose: stay or go?")
     a1 = input()
     time.sleep(2)
     if (a1.upper() == 'GO'):
@@ -9,6 +24,7 @@ def scene1():
         scene2()
     elif (a1.upper() == 'STAY'):
         print("You decide to do nothing. Something sinister is already in the room, and it is too late to change your mind.")
+        scene1()
     else:
         print("*******************Choose correctly!*******************")
         scene1()
@@ -46,23 +62,23 @@ def scene4():
     a1=input()
     time.sleep(2)
     if(a1.upper()=='GO'):
-        print("YOLO")
+        print("You open the door and go inside")
         scene6()
     elif(a1.upper()=='STAY'):
-        print("ded")
+        print("You decide to stay put.")
         scene7()
     else:
         print("*******************Choose correctly!*******************")
         scene4()
 
 def scene5():
-    print("Hello, left or right")
+    print("The room seems pretty lived in compared to everywhere else. There is everything a normal bedroom would have, a bed, night stand and dresser. In the middle of the dresser is a doll. \n As you walk around the room you feel eyes diretly on you but you're not sure where it's coming from. \n You go look at the closet to see if there is anything you can use to protect yourself. You hear footsteps rattling around, and as your turn around, you notice the doll is gone. Inside the closet is a hidden doorway. Should you stay in the room or go through the doorway? Choose: Go or Stay?")
     a1=input()
     time.sleep(2)
-    if(a1.upper()=='LEFT'):
-        print("Go")
+    if(a1.upper()=='GO'):
+        print("You decide to go through the hidden doorway. ")
         scene4()
-    elif(a1.upper()=='RIGHT'):
+    elif(a1.upper()=='STAY'):
         print("right")
         scene7()
     else:
