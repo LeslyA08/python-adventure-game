@@ -42,11 +42,11 @@ def scene2():
     a1 = input()
     time.sleep(2)
     if(a1.upper()== 'LEFT'):
-        print("You decide to go left")
+        print(f"{player1} decides to go left")
         time.sleep(8)
         scene3()
     elif(a1.upper()== 'RIGHT'):
-        print("You decide to go right")
+        print(f"{player1} decides to go right")
         time.sleep(8)
         scene4()
     else:
@@ -80,11 +80,11 @@ def scene4():
     a1=input()
     time.sleep(2)
     if(a1.upper()=='GO'):
-        print("You open the door and go inside")
+        print(f"{player1} opens the door and go inside")
         time.sleep(8)
         scene6()
     elif(a1.upper()=='STAY'):
-        print("You decide to stay put.")
+        print(f"{player1} decide to stay put.")
         time.sleep(8)
         scene7()
     else:
@@ -99,11 +99,11 @@ def scene5():
     a1=input()
     time.sleep(2)
     if(a1.upper()=='GO'):
-        print("You decide to go through the hidden doorway. ")
+        print(f"{player1} decides to go through the hidden doorway. ")
         time.sleep(8)
         scene4()
     elif(a1.upper()=='STAY'):
-        print("You decide to stay in the room.")
+        print(f"{player1} decides to stay in the room.")
         time.sleep(8)
         scene7()
     else:
@@ -118,13 +118,13 @@ def scene6():
     a1=input()
     time.sleep(2)
     if(a1.upper()=='STAY'):
-        print("You decide to stay and go look for another way out. You head back to the door in which you came in and back out to the hallway.")
+        print(f"{player1} decides to stay and go look for another way out. You head back to the door in which you came in and back out to the hallway.")
         time.sleep(8)
         scene4()
     elif(a1.upper()=='GO'):
-        print("You to jump out the window, despite the risks. Fortunately, you land on spongey bushes and make a run for it. You know where you are now, the creepy house just outside of town. You are free and never look back.")
+        print(f"{player1} decide to jump out the window, despite the risks. Fortunately, you land on spongey bushes and make a run for it. You know where you are now, the creepy house just outside of town. You are free and never look back.")
         time.sleep(3)
-        print("YOU WIN")
+        print(f"{player1} WINS")
     else:
         print("*******************Choose correctly!*******************")
         time.sleep(8)
@@ -137,11 +137,11 @@ def scene7():
     a1=input()
     time.sleep(2)
     if(a1.upper()=='LOOK'):
-        print("You decide to go back out to the room...")
+        print(f"{player1} decides to go back out to the room...")
         time.sleep(8)
         scene5()
     elif(a1.upper()=='STAY'):
-        print("You decide to stay. Little do you know she's been in the closet with you the whole time! You black out...")
+        print(f"{player1} decides to stay. Little do you know she's been in the closet with you the whole time! You black out...")
         time.sleep(8)
         scene1()
     else:
